@@ -2,7 +2,19 @@
 
 // 1. countWords
 function countWords(phrase) {
-  // Replace this with your code
+
+  const wordCounts = {}; 
+
+  for (const word in phrase.split(' ')) {
+    if (wordCounts.has(word)) {
+      wordCounts[word] += 1; 
+    } else {
+      wordCounts[word] = 1;
+    }
+  }
+
+  return wordCounts;
+
 }
 
 // 2. getMelonsAtPrice
